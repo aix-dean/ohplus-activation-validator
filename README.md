@@ -146,6 +146,11 @@ curl -X POST \
   http://localhost:8080/validate-activation-key
 ```
 
+```bash
+curl -F "activationKey=@/Users/dean/Documents/ohplus-license-generator/activation-testUser-1758260338362.lic" \
+  https://ohplus-activation-key-validator-zfb2ogutxq-et.a.run.app/validate-activation-key
+  ```
+  
 ### Using JavaScript (Node.js)
 
 ```javascript
