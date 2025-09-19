@@ -3,6 +3,8 @@ const multer = require('multer');
 const crypto = require('crypto');
 const fs = require('fs');
 
+const PORT = process.env.PORT || 8080;
+
 const app = express();
 const upload = multer({ storage: multer.memoryStorage() });
 
@@ -33,6 +35,6 @@ app.post('/validate-activation-key', upload.single('activationKey'), (req, res) 
   }
 });
 
-app.listen(3001, () => {
-  console.log('License validator running on port 3001');
+app.listen(PORT, () => {
+  console.log('License validator running on port ${PORT}');
 });
